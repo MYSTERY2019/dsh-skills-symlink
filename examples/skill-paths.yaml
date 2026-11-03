@@ -1,0 +1,6 @@
+version: 1
+skillPaths:
+  # Paths are resolved from the nearest Git project root.
+  - .codex/skills
+  - tools/skills
+

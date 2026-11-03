@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-labelledby="hiw-title hiw-desc">
+  <title id="hiw-title">One skill library, each project loads only the categories it lists</title>
+  <desc id="hiw-desc">On the left, a skill library organised by category. On the right, two projects list the categories they want in .dsh/skill-paths.yaml: project A takes web and ops (17 skills), project B takes all four (28 skills).</desc>
+
+  <rect width="1200" height="440" fill="#f5f5f5"/>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#4f5d75"/>
+    </marker>
+  </defs>
+
+  <path d="M 500,128 H 780" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#a)"/>
+  <path d="M 500,296 H 780" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <rect x="48" y="64" width="452" height="296" rx="8" fill="#fafafa" stroke="#2d3142" stroke-width="1.2"/>
+  <text x="72" y="104" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#2d3142">Skill library</text>
+  <text x="72" y="128" font-family="Consolas, Menlo, monospace" font-size="12" fill="#4f5d75">skills/ · one folder per category</text>
+
+  <g font-family="Consolas, Menlo, monospace" font-size="13">
+    <rect x="72" y="152" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="88" y="177" fill="#2d3142">web</text><text x="460" y="177" text-anchor="end" fill="#4f5d75">12</text>
+
+    <rect x="72" y="202" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="88" y="227" fill="#2d3142">data</text><text x="460" y="227" text-anchor="end" fill="#4f5d75">8</text>
+
+    <rect x="72" y="252" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="88" y="277" fill="#2d3142">ops</text><text x="460" y="277" text-anchor="end" fill="#4f5d75">5</text>
+
+    <rect x="72" y="302" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="88" y="327" fill="#2d3142">docs</text><text x="460" y="327" text-anchor="end" fill="#4f5d75">3</text>
+  </g>
+
+  <rect x="800" y="64" width="352" height="128" rx="8" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
+  <text x="824" y="104" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#2d3142">Project A</text>
+  <text x="824" y="132" font-family="Consolas, Menlo, monospace" font-size="12" fill="#4f5d75">.dsh/skill-paths.yaml: web, ops</text>
+  <text x="824" y="160" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#2d3142">2 categories · 17 skills</text>
+
+  <rect x="800" y="232" width="352" height="128" rx="8" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
+  <text x="824" y="272" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#2d3142">Project B</text>
+  <text x="824" y="300" font-family="Consolas, Menlo, monospace" font-size="12" fill="#4f5d75">.dsh/skill-paths.yaml: all 4 categories</text>
+  <text x="824" y="328" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#2d3142">4 categories · 28 skills</text>
+
+  <text x="48" y="404" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#4f5d75">One copy of each skill. Edit it here and both projects pick it up.</text>
+</svg>

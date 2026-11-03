@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">dsh-skills-symlink — 每个项目只加载自己列出的技能</title>
+  <desc id="og-desc">社交预览图：标题、一句话说明，右侧示意一个技能库里的四个分类，其中两个被某个项目选中。</desc>
+
+  <rect width="1280" height="640" fill="#f5f5f5"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#246bfd"/>
+
+  <text x="80" y="150" font-family="Consolas, Menlo, monospace" font-size="15" letter-spacing="0.18em" fill="#4f5d75">DEEPSEEK HARNESS PLUGIN</text>
+
+  <text x="78" y="238" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="62" font-weight="700" fill="#1f2328">dsh-skills-symlink</text>
+
+  <text x="80" y="296" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" fill="#2d3142">Each project loads only the skills it lists.</text>
+
+  <text x="80" y="338" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b7280">One shared library. No copies, no symlink bookkeeping.</text>
+
+  <!-- library chips -->
+  <g font-family="Consolas, Menlo, monospace" font-size="17">
+    <rect x="80" y="404" width="132" height="52" rx="8" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="96" y="437" fill="#1f2328">web</text>
+    <text x="196" y="437" text-anchor="end" fill="#6b7280">12</text>
+
+    <rect x="224" y="404" width="132" height="52" rx="8" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="240" y="437" fill="#1f2328">data</text>
+    <text x="340" y="437" text-anchor="end" fill="#6b7280">8</text>
+
+    <rect x="368" y="404" width="132" height="52" rx="8" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="384" y="437" fill="#1f2328">ops</text>
+    <text x="484" y="437" text-anchor="end" fill="#6b7280">5</text>
+
+    <rect x="512" y="404" width="132" height="52" rx="8" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="528" y="437" fill="#1f2328">docs</text>
+    <text x="628" y="437" text-anchor="end" fill="#6b7280">3</text>
+  </g>
+
+  <!-- arrow -->
+  <path d="M 664,430 H 744" fill="none" stroke="#4f5d75" stroke-width="2" marker-end="url(#og-arrow)"/>
+  <defs>
+    <marker id="og-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#4f5d75"/>
+    </marker>
+  </defs>
+
+  <!-- project card -->
+  <rect x="776" y="378" width="424" height="104" rx="10" fill="#ffffff" stroke="#2d3142" stroke-width="1.4"/>
+  <text x="800" y="414" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="600" fill="#1f2328">project A</text>
+  <text x="800" y="440" font-family="Consolas, Menlo, monospace" font-size="14" fill="#6b7280">.dsh/skill-paths.yaml: web, ops</text>
+  <text x="800" y="466" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#6b7280">sees 17 skills, not 28</text>
+
+  <text x="80" y="560" font-family="Consolas, Menlo, monospace" font-size="15" fill="#4f5d75">github.com/MYSTERY2019/dsh-skills-symlink</text>
+</svg>

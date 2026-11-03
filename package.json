@@ -1,0 +1,84 @@
+{
+  "name": "dsh-skills-symlink",
+  "version": "0.4.0",
+  "description": "Project-scoped custom SKILL roots for DeepSeek Harness, with multi-level (category) discovery",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "skills",
+    "project-configuration",
+    "maxdepth",
+    "nested-skills"
+  ],
+  "author": "MYSTERY2019 (fork of NeoRrrr/dsh-project-skill-paths)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MYSTERY2019/dsh-skills-symlink.git"
+  },
+  "homepage": "https://github.com/MYSTERY2019/dsh-skills-symlink#readme",
+  "bugs": {
+    "url": "https://github.com/MYSTERY2019/dsh-skills-symlink/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./project-config": "./lib/project-config.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "examples",
+    "cordis.patch.yml",
+    "CHANGELOG.md",
+    "README.md",
+    "README.zh.md",
+    "SECURITY.md",
+    "LICENSE",
+    "docs",
+    "scripts"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.5"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check lib/index.js && node --check lib/project-config.js && node --check lib/routes.js && node --check lib/diagnostics.js && node --check client/client.js && node --test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ],
+      "platform": "web"
+    }
+  },
+  "dependencies": {
+    "yaml": "^2.9.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": ">=0.2.1-rc.5",
+    "@deepseek-ai/dsh-skill-filesystem": ">=0.2.1-rc.5",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.5",
+    "@deepseek-ai/dsh-skill": "0.2.1-rc.5",
+    "@deepseek-ai/dsh-skill-filesystem": "0.2.1-rc.5"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

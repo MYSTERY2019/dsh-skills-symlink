@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" width="1120" height="560" role="img" aria-labelledby="ov-title ov-desc">
+  <title id="ov-title">Skill 总览面板：按项目折叠的技能结构</title>
+  <desc id="ov-desc">插件页面上的 Skill 总览：每个项目一行，展开后显示按分类占比的技能构成条、图例和目录树。示例数据为 web、data、ops、docs 四个分类。</desc>
+
+  <rect width="1120" height="560" fill="#ffffff"/>
+
+  <!-- header -->
+  <text x="32" y="52" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="19" font-weight="600" fill="#1f2328">Skill 总览</text>
+  <text x="32" y="76" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="13" fill="#6b7280">12 个项目，点开看各自的结构</text>
+  <rect x="948" y="30" width="108" height="32" rx="6" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="1002" y="51" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12" fill="#1f2328">重新读取</text>
+  <line x1="32" y1="88" x2="1056" y2="88" stroke="#e5e7eb"/>
+
+  <!-- project 1 (expanded) -->
+  <text x="32" y="122" font-family="Consolas, Menlo, monospace" font-size="13.5" font-weight="600" fill="#1f2328">web-app</text>
+  <text x="118" y="122" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12.5" fill="#6b7280">3 个根 · 17 个技能 · maxDepth 2</text>
+  <text x="1056" y="122" text-anchor="end" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12" fill="#6b7280">收起</text>
+
+  <text x="32" y="158" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12.5" font-weight="600" fill="#1f2328">技能文件 · 共 17 个（含重名）</text>
+
+  <!-- composition bar: web 12/17, ops 5/17 -->
+  <rect x="32" y="170" width="388" height="12" rx="6" fill="#f3f4f6"/>
+  <rect x="32" y="170" width="274" height="12" fill="#246bfd"/>
+  <rect x="306" y="170" width="114" height="12" fill="#12a594"/>
+  <rect x="382" y="170" width="38" height="12" rx="6" fill="#12a594"/>
+
+  <!-- legend -->
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12" fill="#6b7280">
+    <rect x="32" y="196" width="9" height="9" rx="2" fill="#246bfd"/>
+    <text x="47" y="205">web 12</text>
+    <rect x="112" y="196" width="9" height="9" rx="2" fill="#12a594"/>
+    <text x="127" y="205">ops 5</text>
+  </g>
+
+  <text x="32" y="240" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12.5" font-weight="600" fill="#1f2328">目录</text>
+
+  <g font-family="Consolas, Menlo, monospace" font-size="13">
+<path d="M1.9 3.6h4.05l1.35 1.55h6.8a.7.7 0 0 1 .7.7v6.55a.7.7 0 0 1-.7.7H1.9a.7.7 0 0 1-.7-.7V4.3a.7.7 0 0 1 .7-.7Z" fill="none" stroke="#1f2328" stroke-width="1.25" stroke-linejoin="round" transform="translate(32,254) scale(0.95)"/>
+    <text x="53" y="266" font-weight="600" fill="#1f2328">skills</text>
+    <text x="1056" y="266" text-anchor="end" fill="#6b7280">17</text>
+
+<path d="M1.9 3.6h4.05l1.35 1.55h6.8a.7.7 0 0 1 .7.7v6.55a.7.7 0 0 1-.7.7H1.9a.7.7 0 0 1-.7-.7V4.3a.7.7 0 0 1 .7-.7Z" fill="none" stroke="#4f5d75" stroke-width="1.25" stroke-linejoin="round" transform="translate(50,278) scale(0.95)"/>
+    <text x="71" y="290" fill="#1f2328">web</text>
+    <text x="1056" y="290" text-anchor="end" fill="#6b7280">12</text>
+
+    <rect x="88" y="304" width="58" height="20" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="117" y="318" text-anchor="middle" fill="#6b7280">alpha</text>
+    <rect x="152" y="304" width="50" height="20" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="177" y="318" text-anchor="middle" fill="#6b7280">beta</text>
+    <rect x="208" y="304" width="62" height="20" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="239" y="318" text-anchor="middle" fill="#6b7280">gamma</text>
+
+<path d="M1.9 3.6h4.05l1.35 1.55h6.8a.7.7 0 0 1 .7.7v6.55a.7.7 0 0 1-.7.7H1.9a.7.7 0 0 1-.7-.7V4.3a.7.7 0 0 1 .7-.7Z" fill="none" stroke="#4f5d75" stroke-width="1.25" stroke-linejoin="round" transform="translate(50,326) scale(0.95)"/>
+    <text x="71" y="338" fill="#1f2328">ops</text>
+    <text x="1056" y="338" text-anchor="end" fill="#6b7280">5</text>
+  </g>
+
+  <line x1="32" y1="366" x2="1056" y2="366" stroke="#e5e7eb"/>
+
+  <!-- project 2 (collapsed) -->
+  <text x="32" y="400" font-family="Consolas, Menlo, monospace" font-size="13.5" font-weight="600" fill="#1f2328">data-pipeline</text>
+  <text x="158" y="400" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12.5" fill="#6b7280">4 个根 · 28 个技能 · maxDepth 2</text>
+  <text x="1056" y="400" text-anchor="end" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12" fill="#6b7280">展开</text>
+
+  <line x1="32" y1="424" x2="1056" y2="424" stroke="#e5e7eb"/>
+
+  <!-- project 3 (collapsed) -->
+  <text x="32" y="458" font-family="Consolas, Menlo, monospace" font-size="13.5" font-weight="600" fill="#1f2328">design-system</text>
+  <text x="158" y="458" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12.5" fill="#6b7280">2 个根 · 9 个技能 · maxDepth 2</text>
+  <text x="1056" y="458" text-anchor="end" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12" fill="#6b7280">展开</text>
+
+  <line x1="32" y1="482" x2="1056" y2="482" stroke="#e5e7eb"/>
+
+  <!-- project 4 -->
+  <text x="32" y="516" font-family="Consolas, Menlo, monospace" font-size="13.5" font-weight="600" fill="#1f2328">docs-site</text>
+  <text x="126" y="516" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12.5" fill="#6b7280">没有配置 .dsh/skill-paths.yaml</text>
+  <text x="1056" y="516" text-anchor="end" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12" fill="#6b7280">展开</text>
+</svg>

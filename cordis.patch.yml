@@ -1,0 +1,6 @@
+# Installable DSH profile bundle. The host-side provider is shared by sessions
+# and resolves the project-specific roots from each skill lookup's cwd.
+- insert:
+    - id: dsh-skills-symlink
+      name: dsh-skills-symlink
+

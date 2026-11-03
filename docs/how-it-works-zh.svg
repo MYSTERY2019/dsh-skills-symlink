@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-labelledby="hiw-title hiw-desc">
+  <title id="hiw-title">同一份技能库，每个项目只加载自己配置的分类</title>
+  <desc id="hiw-desc">左边是一个按分类整理的技能库；右边两个项目各自用 .dsh/skill-paths.yaml 列出要哪些分类，项目 A 只要 web 和 ops 两类共 17 个技能，项目 B 要全部四类共 28 个。</desc>
+
+  <rect width="1200" height="440" fill="#f5f5f5"/>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#4f5d75"/>
+    </marker>
+  </defs>
+
+  <path d="M 500,128 H 780" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#a)"/>
+  <path d="M 500,296 H 780" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <rect x="48" y="64" width="452" height="296" rx="8" fill="#fafafa" stroke="#2d3142" stroke-width="1.2"/>
+  <text x="72" y="104" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="20" font-weight="600" fill="#2d3142">技能库</text>
+  <text x="72" y="128" font-family="Consolas, Menlo, monospace" font-size="12" fill="#4f5d75">skills/ · 按分类整理</text>
+
+  <g font-family="Consolas, Menlo, monospace" font-size="13">
+    <rect x="72" y="152" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="88" y="177" fill="#2d3142">web</text><text x="460" y="177" text-anchor="end" fill="#4f5d75">12</text>
+
+    <rect x="72" y="202" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="88" y="227" fill="#2d3142">data</text><text x="460" y="227" text-anchor="end" fill="#4f5d75">8</text>
+
+    <rect x="72" y="252" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="88" y="277" fill="#2d3142">ops</text><text x="460" y="277" text-anchor="end" fill="#4f5d75">5</text>
+
+    <rect x="72" y="302" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
+    <text x="88" y="327" fill="#2d3142">docs</text><text x="460" y="327" text-anchor="end" fill="#4f5d75">3</text>
+  </g>
+
+  <rect x="800" y="64" width="352" height="128" rx="8" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
+  <text x="824" y="104" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="15" font-weight="600" fill="#2d3142">项目 A</text>
+  <text x="824" y="132" font-family="Consolas, Menlo, monospace" font-size="12" fill="#4f5d75">.dsh/skill-paths.yaml：web、ops</text>
+  <text x="824" y="160" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="13.5" font-weight="500" fill="#2d3142">2 类 · 17 个技能</text>
+
+  <rect x="800" y="232" width="352" height="128" rx="8" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
+  <text x="824" y="272" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="15" font-weight="600" fill="#2d3142">项目 B</text>
+  <text x="824" y="300" font-family="Consolas, Menlo, monospace" font-size="12" fill="#4f5d75">.dsh/skill-paths.yaml：全部 4 类</text>
+  <text x="824" y="328" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="13.5" font-weight="500" fill="#2d3142">4 类 · 28 个技能</text>
+
+  <text x="48" y="404" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="13" fill="#4f5d75">技能只存在这一份。改这里，两个项目同时生效。</text>
+</svg>
