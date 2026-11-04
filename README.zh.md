@@ -1,24 +1,8 @@
-<p align="center">
-  <img src="docs/hero.png" alt="dsh-skills-symlink：每个项目只加载自己列出的技能" width="720">
-</p>
+![dsh-skills-symlink](docs/hero.png)
 
-<p align="center">
-  <a href="https://github.com/MYSTERY2019/dsh-skills-symlink/releases"><img src="https://img.shields.io/github/v/release/MYSTERY2019/dsh-skills-symlink?style=flat-square" alt="Latest release"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/MYSTERY2019/dsh-skills-symlink?style=flat-square" alt="MIT license"></a>
-  <a href="https://github.com/deepseek-ai/deepseek-harness"><img src="https://img.shields.io/badge/DSH-0.2.x-4D6BFE?style=flat-square" alt="DeepSeek Harness 0.2.x"></a>
-  <img src="https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%E2%89%A524-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js ^22.19 || >=24">
-</p>
+[![Latest release](https://img.shields.io/github/v/release/MYSTERY2019/dsh-skills-symlink?style=flat-square)](https://github.com/MYSTERY2019/dsh-skills-symlink/releases) [![MIT license](https://img.shields.io/github/license/MYSTERY2019/dsh-skills-symlink?style=flat-square)](LICENSE) [![DeepSeek Harness 0.2.x](https://img.shields.io/badge/DSH-0.2.x-4D6BFE?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness) ![Node.js ^22.19 || >=24](https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%E2%89%A524-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 
-<p align="center">
-  <a href="README.md">English</a> · <b>中文</b>
-</p>
-
-<p align="center">
-  <a href="#-安装">安装</a> ·
-  <a href="#-使用">使用</a> ·
-  <a href="#-配置">配置</a> ·
-  <a href="#-排查">排查</a>
-</p>
+[English](https://github.com/MYSTERY2019/dsh-skills-symlink#readme) · [中文](https://github.com/MYSTERY2019/dsh-skills-symlink/blob/main/README.zh.md)
 
 给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）的每个项目配一套自己的技能。它替代 Hermes 里的 skill symlink：一份共享技能库，每个项目只加载自己列出的分类。插件本身不创建任何符号链接，名字只是借用 Hermes 的说法。
 

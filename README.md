@@ -1,24 +1,8 @@
-<p align="center">
-  <img src="docs/hero.png" alt="dsh-skills-symlink: each project loads only the skills it lists" width="720">
-</p>
+![dsh-skills-symlink](docs/hero.png)
 
-<p align="center">
-  <a href="https://github.com/MYSTERY2019/dsh-skills-symlink/releases"><img src="https://img.shields.io/github/v/release/MYSTERY2019/dsh-skills-symlink?style=flat-square" alt="Latest release"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/MYSTERY2019/dsh-skills-symlink?style=flat-square" alt="MIT license"></a>
-  <a href="https://github.com/deepseek-ai/deepseek-harness"><img src="https://img.shields.io/badge/DSH-0.2.x-4D6BFE?style=flat-square" alt="DeepSeek Harness 0.2.x"></a>
-  <img src="https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%E2%89%A524-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js ^22.19 || >=24">
-</p>
+[![Latest release](https://img.shields.io/github/v/release/MYSTERY2019/dsh-skills-symlink?style=flat-square)](https://github.com/MYSTERY2019/dsh-skills-symlink/releases) [![MIT license](https://img.shields.io/github/license/MYSTERY2019/dsh-skills-symlink?style=flat-square)](LICENSE) [![DeepSeek Harness 0.2.x](https://img.shields.io/badge/DSH-0.2.x-4D6BFE?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness) ![Node.js ^22.19 || >=24](https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%E2%89%A524-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 
-<p align="center">
-  <b>English</b> · <a href="README.zh.md">中文</a>
-</p>
-
-<p align="center">
-  <a href="#-install">Install</a> ·
-  <a href="#-use">Use</a> ·
-  <a href="#-configuration">Configuration</a> ·
-  <a href="#-troubleshooting">Troubleshooting</a>
-</p>
+[English](https://github.com/MYSTERY2019/dsh-skills-symlink#readme) · [中文](https://github.com/MYSTERY2019/dsh-skills-symlink/blob/main/README.zh.md)
 
 Give every project in [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) its own set of skills. It replaces the skill symlink from Hermes: one shared library, and each project loads only the categories it lists. The plugin creates no symbolic links; the name only borrows the Hermes term.
 

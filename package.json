@@ -39,7 +39,8 @@
     "SECURITY.md",
     "LICENSE",
     "docs",
-    "scripts"
+    "scripts",
+    "locale"
   ],
   "engines": {
     "node": "^22.19.0 || >=24.0.0",
