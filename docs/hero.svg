@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#070B1A"/><stop offset="1" stop-color="#0D1430"/></linearGradient>
+<radialGradient id="g1" cx="0.78" cy="0.45" r="0.5"><stop offset="0" stop-color="#4D6BFE" stop-opacity="0.32"/><stop offset="1" stop-color="#4D6BFE" stop-opacity="0"/></radialGradient>
+<radialGradient id="g2" cx="0.08" cy="1" r="0.55"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.22"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#FFFFFF" fill-opacity="0.07"/></pattern>
+<linearGradient id="title" x1="0" x2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#B9C6FF"/></linearGradient>
+<linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#18213F"/><stop offset="1" stop-color="#121A33"/></linearGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/></filter>
+</defs>
+<rect width="1280" height="640" fill="url(#bg)"/><rect width="1280" height="640" fill="url(#dots)"/><rect width="1280" height="640" fill="url(#g1)"/><rect width="1280" height="640" fill="url(#g2)"/>
+<rect x="84" y="132" width="284" height="34" rx="17" fill="#4D6BFE" fill-opacity="0.14" stroke="#4D6BFE" stroke-opacity="0.55"/>
+<circle cx="104" cy="149" r="5" fill="#7C95FF"/>
+<text x="118" y="154" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="13.5" font-weight="600" letter-spacing="1.6" fill="#B4C2FF">DEEPSEEK HARNESS PLUGIN</text>
+<text x="81" y="248" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="-1.5" fill="url(#title)">dsh-skills-symlink</text>
+<text x="84" y="304" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="27" font-weight="600" fill="#E6EAF7">One skill library.</text>
+<text x="84" y="342" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="27" font-weight="600" fill="#8E9BC2">Each project loads only what it lists.</text>
+<rect x="84" y="392" width="219" height="36" rx="9" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<text x="99" y="415.5" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="14" fill="#C9D2EE">per-project skillPaths</text>
+<rect x="313.2" y="392" width="133" height="36" rx="9" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<text x="328.2" y="415.5" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="14" fill="#C9D2EE">maxDepth 1–6</text>
+<rect x="456.4" y="392" width="116" height="36" rx="9" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<text x="471.4" y="415.5" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="14" fill="#C9D2EE">hot reload</text>
+<text x="84" y="548" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="14.5" fill="#5F6C91">github.com/MYSTERY2019/dsh-skills-symlink</text>
+<g filter="url(#sh)"><rect x="712" y="150" width="212" height="340" rx="18" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.10"/></g>
+<path d="M732 177 q0 -3 3 -3 h6 l3 3 h9 q3 0 3 3 v10 q0 3 -3 3 h-18 q-3 0 -3 -3 z" fill="#7C95FF"/>
+<text x="766" y="190" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#E6EAF7">skills/</text>
+<text x="904" y="190" text-anchor="end" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#6F7CA3">28 skills</text>
+<line x1="712" y1="212" x2="924" y2="212" stroke="#FFFFFF" stroke-opacity="0.08"/>
+<rect x="726" y="230" width="184" height="50" rx="11" fill="#5B7CFF" fill-opacity="0.09" stroke="#5B7CFF" stroke-opacity="0.35"/>
+<rect x="726" y="242" width="4" height="26" rx="2" fill="#5B7CFF"/>
+<text x="744" y="261" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="15" fill="#E6EAF7">web/</text>
+<text x="894" y="261" text-anchor="end" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#5B7CFF">12</text>
+<rect x="726" y="294" width="184" height="50" rx="11" fill="#2DD4BF" fill-opacity="0.09" stroke="#2DD4BF" stroke-opacity="0.35"/>
+<rect x="726" y="306" width="4" height="26" rx="2" fill="#2DD4BF"/>
+<text x="744" y="325" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="15" fill="#E6EAF7">data/</text>
+<text x="894" y="325" text-anchor="end" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#2DD4BF">8</text>
+<rect x="726" y="358" width="184" height="50" rx="11" fill="#F5A524" fill-opacity="0.09" stroke="#F5A524" stroke-opacity="0.35"/>
+<rect x="726" y="370" width="4" height="26" rx="2" fill="#F5A524"/>
+<text x="744" y="389" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="15" fill="#E6EAF7">ops/</text>
+<text x="894" y="389" text-anchor="end" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#F5A524">5</text>
+<rect x="726" y="422" width="184" height="50" rx="11" fill="#F472B6" fill-opacity="0.09" stroke="#F472B6" stroke-opacity="0.35"/>
+<rect x="726" y="434" width="4" height="26" rx="2" fill="#F472B6"/>
+<text x="744" y="453" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="15" fill="#E6EAF7">docs/</text>
+<text x="894" y="453" text-anchor="end" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#F472B6">3</text>
+<path d="M910 255 C960 255 960 229.0 1010 229.0" fill="none" stroke="#5B7CFF" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="910" cy="255" r="3.6" fill="#5B7CFF"/>
+<path d="M910 383 C960 383 960 247.0 1010 247.0" fill="none" stroke="#F5A524" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="910" cy="383" r="3.6" fill="#F5A524"/>
+<g filter="url(#sh)"><rect x="1010" y="168" width="206" height="140" rx="18" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.12"/></g>
+<circle cx="1010" cy="229.0" r="4" fill="#5B7CFF" stroke="#0D1430" stroke-width="2"/>
+<circle cx="1010" cy="247.0" r="4" fill="#F5A524" stroke="#0D1430" stroke-width="2"/>
+<text x="1032" y="204" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">project A</text>
+<text x="1032" y="226" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="11.5" fill="#6F7CA3">.dsh/skill-paths.yaml</text>
+<text x="1032" y="270" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF">17</text>
+<text x="1073" y="270" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#8E9BC2">skills</text>
+<rect x="1032" y="282" width="162" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.07"/>
+<rect x="1032.0" y="282" width="67.4" height="6" rx="3" fill="#5B7CFF"/>
+<rect x="1101.4" y="282" width="26.9" height="6" rx="3" fill="#F5A524"/>
+<path d="M910 255 C960 255 960 395.0 1010 395.0" fill="none" stroke="#5B7CFF" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="910" cy="255" r="3.6" fill="#5B7CFF"/>
+<path d="M910 319 C960 319 960 413.0 1010 413.0" fill="none" stroke="#2DD4BF" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="910" cy="319" r="3.6" fill="#2DD4BF"/>
+<path d="M910 383 C960 383 960 431.0 1010 431.0" fill="none" stroke="#F5A524" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="910" cy="383" r="3.6" fill="#F5A524"/>
+<path d="M910 447 C960 447 960 449.0 1010 449.0" fill="none" stroke="#F472B6" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="910" cy="447" r="3.6" fill="#F472B6"/>
+<g filter="url(#sh)"><rect x="1010" y="352" width="206" height="140" rx="18" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.12"/></g>
+<circle cx="1010" cy="395.0" r="4" fill="#5B7CFF" stroke="#0D1430" stroke-width="2"/>
+<circle cx="1010" cy="413.0" r="4" fill="#2DD4BF" stroke="#0D1430" stroke-width="2"/>
+<circle cx="1010" cy="431.0" r="4" fill="#F5A524" stroke="#0D1430" stroke-width="2"/>
+<circle cx="1010" cy="449.0" r="4" fill="#F472B6" stroke="#0D1430" stroke-width="2"/>
+<text x="1032" y="388" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">project B</text>
+<text x="1032" y="410" font-family="JetBrains Mono, SFMono-Regular, Consolas, Menlo, monospace" font-size="11.5" fill="#6F7CA3">.dsh/skill-paths.yaml</text>
+<text x="1032" y="454" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF">28</text>
+<text x="1082" y="454" font-family="Inter Display, Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#8E9BC2">skills</text>
+<rect x="1032" y="466" width="162" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.07"/>
+<rect x="1032.0" y="466" width="67.4" height="6" rx="3" fill="#5B7CFF"/>
+<rect x="1101.4" y="466" width="44.3" height="6" rx="3" fill="#2DD4BF"/>
+<rect x="1147.7" y="466" width="26.9" height="6" rx="3" fill="#F5A524"/>
+<rect x="1176.6" y="466" width="15.4" height="6" rx="3" fill="#F472B6"/>
+</svg>
