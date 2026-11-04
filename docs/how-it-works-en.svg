@@ -1,45 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-labelledby="hiw-title hiw-desc">
-  <title id="hiw-title">One skill library, each project loads only the categories it lists</title>
-  <desc id="hiw-desc">On the left, a skill library organised by category. On the right, two projects list the categories they want in .dsh/skill-paths.yaml: project A takes web and ops (17 skills), project B takes all four (28 skills).</desc>
-
-  <rect width="1200" height="440" fill="#f5f5f5"/>
-
-  <defs>
-    <marker id="a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
-      <polygon points="0 0, 9 3.5, 0 7" fill="#4f5d75"/>
-    </marker>
-  </defs>
-
-  <path d="M 500,128 H 780" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#a)"/>
-  <path d="M 500,296 H 780" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#a)"/>
-
-  <rect x="48" y="64" width="452" height="296" rx="8" fill="#fafafa" stroke="#2d3142" stroke-width="1.2"/>
-  <text x="72" y="104" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#2d3142">Skill library</text>
-  <text x="72" y="128" font-family="Consolas, Menlo, monospace" font-size="12" fill="#4f5d75">skills/ · one folder per category</text>
-
-  <g font-family="Consolas, Menlo, monospace" font-size="13">
-    <rect x="72" y="152" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
-    <text x="88" y="177" fill="#2d3142">web</text><text x="460" y="177" text-anchor="end" fill="#4f5d75">12</text>
-
-    <rect x="72" y="202" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
-    <text x="88" y="227" fill="#2d3142">data</text><text x="460" y="227" text-anchor="end" fill="#4f5d75">8</text>
-
-    <rect x="72" y="252" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
-    <text x="88" y="277" fill="#2d3142">ops</text><text x="460" y="277" text-anchor="end" fill="#4f5d75">5</text>
-
-    <rect x="72" y="302" width="404" height="40" rx="4" fill="#ffffff" stroke="#c9cbd3"/>
-    <text x="88" y="327" fill="#2d3142">docs</text><text x="460" y="327" text-anchor="end" fill="#4f5d75">3</text>
-  </g>
-
-  <rect x="800" y="64" width="352" height="128" rx="8" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
-  <text x="824" y="104" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#2d3142">Project A</text>
-  <text x="824" y="132" font-family="Consolas, Menlo, monospace" font-size="12" fill="#4f5d75">.dsh/skill-paths.yaml: web, ops</text>
-  <text x="824" y="160" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#2d3142">2 categories · 17 skills</text>
-
-  <rect x="800" y="232" width="352" height="128" rx="8" fill="#ffffff" stroke="#2d3142" stroke-width="1.2"/>
-  <text x="824" y="272" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#2d3142">Project B</text>
-  <text x="824" y="300" font-family="Consolas, Menlo, monospace" font-size="12" fill="#4f5d75">.dsh/skill-paths.yaml: all 4 categories</text>
-  <text x="824" y="328" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#2d3142">4 categories · 28 skills</text>
-
-  <text x="48" y="404" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#4f5d75">One copy of each skill. Edit it here and both projects pick it up.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="680" viewBox="0 0 1680 680">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#070B1A"/><stop offset="1" stop-color="#0D1430"/></linearGradient>
+<radialGradient id="g1" cx="0.6" cy="0.35" r="0.6"><stop offset="0" stop-color="#4D6BFE" stop-opacity="0.22"/><stop offset="1" stop-color="#4D6BFE" stop-opacity="0"/></radialGradient>
+<radialGradient id="g2" cx="0.05" cy="1" r="0.6"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.16"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#FFFFFF" fill-opacity="0.06"/></pattern>
+<linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#18213F"/><stop offset="1" stop-color="#121A33"/></linearGradient>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7C8AB5"/></marker>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/></filter>
+</defs>
+<rect width="1680" height="680" fill="url(#bg)"/><rect width="1680" height="680" fill="url(#dots)"/><rect width="1680" height="680" fill="url(#g1)"/><rect width="1680" height="680" fill="url(#g2)"/>
+<text x="60" y="70" font-family="JetBrains Mono, monospace" font-size="14" font-weight="600" letter-spacing="2" fill="#8EA2FF">HOW IT WORKS</text>
+<g filter="url(#sh)"><rect x="60" y="104" width="440" height="460" rx="18" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.11"/></g>
+<path transform="translate(86 136) scale(1)" d="M0 3 q0 -3 3 -3 h6 l3 3 h9 q3 0 3 3 v10 q0 3 -3 3 h-18 q-3 0 -3 -3 z" fill="#7C95FF"/>
+<text x="122" y="153" font-family="Inter, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Shared skill library</text>
+<text x="86" y="186" font-family="Inter, sans-serif" font-size="14" fill="#6F7CA3"><tspan font-family="JetBrains Mono, monospace">skills/</tspan> · one folder per category</text>
+<rect x="80" y="214" width="400" height="68" rx="12" fill="#5B7CFF" fill-opacity="0.09" stroke="#5B7CFF" stroke-opacity="0.35"/>
+<rect x="80" y="232" width="4" height="32" rx="2" fill="#5B7CFF"/>
+<text x="102" y="255" font-family="JetBrains Mono, monospace" font-size="17" fill="#E6EAF7">web/</text>
+<text x="456" y="255" text-anchor="end" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#5B7CFF">12</text>
+<rect x="80" y="298" width="400" height="68" rx="12" fill="#2DD4BF" fill-opacity="0.09" stroke="#2DD4BF" stroke-opacity="0.35"/>
+<rect x="80" y="316" width="4" height="32" rx="2" fill="#2DD4BF"/>
+<text x="102" y="339" font-family="JetBrains Mono, monospace" font-size="17" fill="#E6EAF7">data/</text>
+<text x="456" y="339" text-anchor="end" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#2DD4BF">8</text>
+<rect x="80" y="382" width="400" height="68" rx="12" fill="#F5A524" fill-opacity="0.09" stroke="#F5A524" stroke-opacity="0.35"/>
+<rect x="80" y="400" width="4" height="32" rx="2" fill="#F5A524"/>
+<text x="102" y="423" font-family="JetBrains Mono, monospace" font-size="17" fill="#E6EAF7">ops/</text>
+<text x="456" y="423" text-anchor="end" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#F5A524">5</text>
+<rect x="80" y="466" width="400" height="68" rx="12" fill="#F472B6" fill-opacity="0.09" stroke="#F472B6" stroke-opacity="0.35"/>
+<rect x="80" y="484" width="4" height="32" rx="2" fill="#F472B6"/>
+<text x="102" y="507" font-family="JetBrains Mono, monospace" font-size="17" fill="#E6EAF7">docs/</text>
+<text x="456" y="507" text-anchor="end" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#F472B6">3</text>
+<path d="M480 248 C590 248 620 198.0 730 198.0" fill="none" stroke="#5B7CFF" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="480" cy="248" r="4" fill="#5B7CFF"/>
+<path d="M480 416 C590 416 620 218.0 730 218.0" fill="none" stroke="#F5A524" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="480" cy="416" r="4" fill="#F5A524"/>
+<g filter="url(#sh)"><rect x="730" y="104" width="470" height="208" rx="18" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.11"/></g>
+<circle cx="730" cy="198.0" r="4.5" fill="#5B7CFF" stroke="#0D1430" stroke-width="2"/>
+<circle cx="730" cy="218.0" r="4.5" fill="#F5A524" stroke="#0D1430" stroke-width="2"/>
+<text x="756" y="146" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">project A</text>
+<text x="1174" y="146" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13" fill="#6F7CA3">.dsh/skill-paths.yaml</text>
+<rect x="752" y="164" width="426" height="98" rx="10" fill="#0A0F22" stroke="#FFFFFF" stroke-opacity="0.07"/>
+<text x="770" y="192" font-family="JetBrains Mono, monospace" font-size="15" fill="#8EA2FF">skillPaths:</text>
+<text x="770" y="218" font-family="JetBrains Mono, monospace" font-size="15" xml:space="preserve"><tspan fill="#6F7CA3">  - </tspan><tspan fill="#A5F3C4">skills/web</tspan></text>
+<text x="770" y="244" font-family="JetBrains Mono, monospace" font-size="15" xml:space="preserve"><tspan fill="#6F7CA3">  - </tspan><tspan fill="#A5F3C4">skills/ops</tspan></text>
+<text x="756" y="290" font-family="Inter, sans-serif" font-size="14" fill="#8E9BC2">works with the default maxDepth: 1</text>
+<line x1="1212" y1="208.0" x2="1296" y2="208.0" stroke="#7C8AB5" stroke-width="2" marker-end="url(#ar)"/>
+<g filter="url(#sh)"><rect x="1310" y="104" width="310" height="208" rx="18" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.11"/></g>
+<text x="1336" y="146" font-family="Inter, sans-serif" font-size="15" fill="#8E9BC2">Session loads</text>
+<text x="1334" y="208" font-family="Inter Display, Inter, Noto Sans CJK SC, sans-serif" font-size="50" font-weight="800" fill="#FFFFFF">17</text>
+<text x="1388" y="208" font-family="Inter, sans-serif" font-size="18" fill="#8E9BC2">skills</text>
+<rect x="1336" y="228" width="258" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.07"/>
+<rect x="1336.0" y="228" width="107.6" height="8" rx="4" fill="#5B7CFF"/>
+<rect x="1446.6" y="228" width="43.1" height="8" rx="4" fill="#F5A524"/>
+<circle cx="1341" cy="266" r="5" fill="#5B7CFF"/>
+<text x="1352" y="271" font-family="Inter, sans-serif" font-size="14" fill="#C9D2EE">web 12</text>
+<circle cx="1414.6" cy="266" r="5" fill="#F5A524"/>
+<text x="1425.6" y="271" font-family="Inter, sans-serif" font-size="14" fill="#C9D2EE">ops 5</text>
+<path d="M480 248 C590 248 620 430.0 730 430.0" fill="none" stroke="#5B7CFF" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="480" cy="248" r="4" fill="#5B7CFF"/>
+<path d="M480 332 C590 332 620 450.0 730 450.0" fill="none" stroke="#2DD4BF" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="480" cy="332" r="4" fill="#2DD4BF"/>
+<path d="M480 416 C590 416 620 470.0 730 470.0" fill="none" stroke="#F5A524" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="480" cy="416" r="4" fill="#F5A524"/>
+<path d="M480 500 C590 500 620 490.0 730 490.0" fill="none" stroke="#F472B6" stroke-width="2.4" stroke-opacity="0.85"/>
+<circle cx="480" cy="500" r="4" fill="#F472B6"/>
+<g filter="url(#sh)"><rect x="730" y="356" width="470" height="208" rx="18" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.11"/></g>
+<circle cx="730" cy="430.0" r="4.5" fill="#5B7CFF" stroke="#0D1430" stroke-width="2"/>
+<circle cx="730" cy="450.0" r="4.5" fill="#2DD4BF" stroke="#0D1430" stroke-width="2"/>
+<circle cx="730" cy="470.0" r="4.5" fill="#F5A524" stroke="#0D1430" stroke-width="2"/>
+<circle cx="730" cy="490.0" r="4.5" fill="#F472B6" stroke="#0D1430" stroke-width="2"/>
+<text x="756" y="398" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">project B</text>
+<text x="1174" y="398" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13" fill="#6F7CA3">.dsh/skill-paths.yaml</text>
+<rect x="752" y="416" width="426" height="72" rx="10" fill="#0A0F22" stroke="#FFFFFF" stroke-opacity="0.07"/>
+<text x="770" y="444" font-family="JetBrains Mono, monospace" font-size="15" fill="#8EA2FF">skillPaths:</text>
+<text x="770" y="470" font-family="JetBrains Mono, monospace" font-size="15" xml:space="preserve"><tspan fill="#6F7CA3">  - </tspan><tspan fill="#A5F3C4">skills</tspan></text>
+<text x="756" y="542" font-family="Inter, sans-serif" font-size="14" fill="#8E9BC2">maxDepth: 2 in the plugin row → 4 categories</text>
+<line x1="1212" y1="460.0" x2="1296" y2="460.0" stroke="#7C8AB5" stroke-width="2" marker-end="url(#ar)"/>
+<g filter="url(#sh)"><rect x="1310" y="356" width="310" height="208" rx="18" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.11"/></g>
+<text x="1336" y="398" font-family="Inter, sans-serif" font-size="15" fill="#8E9BC2">Session loads</text>
+<text x="1334" y="460" font-family="Inter Display, Inter, Noto Sans CJK SC, sans-serif" font-size="50" font-weight="800" fill="#FFFFFF">28</text>
+<text x="1401" y="460" font-family="Inter, sans-serif" font-size="18" fill="#8E9BC2">skills</text>
+<rect x="1336" y="480" width="258" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.07"/>
+<rect x="1336.0" y="480" width="107.6" height="8" rx="4" fill="#5B7CFF"/>
+<rect x="1446.6" y="480" width="70.7" height="8" rx="4" fill="#2DD4BF"/>
+<rect x="1520.3" y="480" width="43.1" height="8" rx="4" fill="#F5A524"/>
+<rect x="1566.4" y="480" width="24.6" height="8" rx="4" fill="#F472B6"/>
+<circle cx="1341" cy="518" r="5" fill="#5B7CFF"/>
+<text x="1352" y="523" font-family="Inter, sans-serif" font-size="14" fill="#C9D2EE">web 12</text>
+<circle cx="1414.6" cy="518" r="5" fill="#2DD4BF"/>
+<text x="1425.6" y="523" font-family="Inter, sans-serif" font-size="14" fill="#C9D2EE">data 8</text>
+<circle cx="1488.1999999999998" cy="518" r="5" fill="#F5A524"/>
+<text x="1499.1999999999998" y="523" font-family="Inter, sans-serif" font-size="14" fill="#C9D2EE">ops 5</text>
+<circle cx="1554.1999999999998" cy="518" r="5" fill="#F472B6"/>
+<text x="1565.1999999999998" y="523" font-family="Inter, sans-serif" font-size="14" fill="#C9D2EE">docs 3</text>
+<text x="60" y="626" font-family="Inter, sans-serif" font-size="17" fill="#8E9BC2">One copy of each skill. Edit it once and every project that lists it picks it up next session.</text>
 </svg>
