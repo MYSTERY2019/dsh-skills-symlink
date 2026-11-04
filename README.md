@@ -1,10 +1,37 @@
-Language: **English** | [中文](README.zh.md)
+<p align="center">
+  <img src="docs/social-preview.png" alt="dsh-skills-symlink: each project loads only the skills it lists" width="720">
+</p>
 
-# dsh-skills-symlink
+<p align="center">
+  <a href="https://github.com/MYSTERY2019/dsh-skills-symlink/releases"><img src="https://img.shields.io/github/v/release/MYSTERY2019/dsh-skills-symlink?style=flat-square" alt="Latest release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/MYSTERY2019/dsh-skills-symlink?style=flat-square" alt="MIT license"></a>
+  <a href="https://github.com/deepseek-ai/deepseek-harness"><img src="https://img.shields.io/badge/DSH-0.2.x-4D6BFE?style=flat-square" alt="DeepSeek Harness 0.2.x"></a>
+  <img src="https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%E2%89%A524-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js ^22.19 || >=24">
+</p>
+
+<p align="center">
+  <b>English</b> · <a href="README.zh.md">中文</a>
+</p>
+
+<p align="center">
+  <a href="#-install">Install</a> ·
+  <a href="#-use">Use</a> ·
+  <a href="#-configuration">Configuration</a> ·
+  <a href="#-troubleshooting">Troubleshooting</a>
+</p>
 
 Give every project in [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) its own set of skills. It replaces the skill symlink from Hermes: one shared library, and each project loads only the categories it lists. The plugin creates no symbolic links; the name only borrows the Hermes term.
 
-## Why
+## ✨ Highlights
+
+- 🗂️ **Per-project skill sets**: one `.dsh/skill-paths.yaml` per project, and each project sees only what it lists
+- 📚 **One path for a categorised library**: `maxDepth` reads `category/skill/SKILL.md` layouts up to 6 levels deep
+- 🔥 **Hot reload**: add or remove a skill without restarting DSH
+- 🛡️ **Safe by default**: paths and symlinks outside the project are rejected, and the plugin makes no outbound requests
+- 🩺 **Diagnostics built in**: a log of every root scanned, plus a post-install check script
+- 🧭 **Visual overview**: see each project's skill mix on the Plugins page
+
+## 🤔 Why
 
 If you came from Hermes, you will miss its skill symlink. A skill lives once in a central repository, and any project that wants it symlinks it into its own skills directory. Edit the original and every project follows, with nothing to copy. Project A links the three writing skills, project B links the two tools skills, and each sees exactly its own set. Adding a skill is one more link; nothing else changes.
 
@@ -18,9 +45,13 @@ Third, every skill's name and description goes into context each turn. With a la
 
 This plugin moves the paths into the project, one `.dsh/skill-paths.yaml` per project, and `maxDepth` in the plugin row lets it read category folders, so a single parent path is enough. From one library, project A loads 17 skills and project B loads 28.
 
-![One skill library, two projects loading the categories they list](docs/how-it-works-en.png)
+<p align="center">
+  <img src="docs/how-it-works-en.png" alt="One skill library, two projects loading the categories they list">
+  <br>
+  <i>One library, two projects: A loads 17 skills, B loads 28.</i>
+</p>
 
-## Install
+## 📦 Install
 
 Requires DSH `>=0.2.1-rc.5 <0.3.0` (the 0.2.x line), Node.js `^22.19.0 || >=24.0.0`, and access to GitHub while installing.
 
@@ -40,9 +71,10 @@ dsh plugin --profile web add github:MYSTERY2019/dsh-skills-symlink#v0.4.0
 
 You can also download `dsh-skills-symlink-0.4.0.tgz` from the Release and pass its path instead of the `github:...` spec.
 
+> [!IMPORTANT]
 > **Installed v0.4.0 before?** The `v0.4.0` tag was moved to the fixed commit on 2026-11-04. An existing install does not update itself: remove it and install again as above.
 
-## Use
+## 🚀 Use
 
 Create `.dsh/skill-paths.yaml` in the project root:
 
@@ -99,7 +131,7 @@ Skills are read when a session starts, so a change appears in the next session r
 that is running. `scripts/post-install-check.mjs` points at the depth case when a root resolves to
 zero skills but holds `SKILL.md` files one level further down.
 
-## Check that it took effect
+## ✅ Check that it took effect
 
 After installing and restarting, run the check that ships with the package:
 
@@ -112,7 +144,7 @@ your project resolves. A version mismatch, a missing plugin row, or a project wi
 file is listed as a problem and the exit code becomes 1. Pass `--profile` to look at another
 profile, or `--json` to script it.
 
-## Configuration
+## 🔧 Configuration
 
 Override the plugin row in the profile's `cordis.patch.yml`:
 
@@ -139,15 +171,20 @@ Override the plugin row in the profile's `cordis.patch.yml`:
 
 A number that is out of range or not an integer falls back to its default with a warning; it never stops DSH from starting.
 
+> [!WARNING]
 > When DSH overrides a plugin row it replaces `config` as a whole; it does not merge. Write every key you need in one block, or the rest falls back to defaults. A row with only `maxDepth`, for example, turns `allowExternalPaths` back to `false`, and paths outside the project are skipped (and logged).
 
-## See the current structure on the plugin page
+## 🧭 See the current structure on the plugin page
 
 Open **Plugins → dsh-skills-symlink** in the sidebar and scroll down to the plugin's own sections.
 
 **Skills overview** lists one row per project. A row is read only when you open it, so the list opens fast.
 
-![Skill overview: one row per project, expanded to show its skill mix and folder tree](docs/overview-en.png)
+<p align="center">
+  <img src="docs/overview-en.png" alt="Skill overview: one row per project, expanded to show its skill mix and folder tree">
+  <br>
+  <i>Skills overview on the Plugins page: one row per project, expanded to its skill mix and folder tree.</i>
+</p>
 
 - The bar at the top is the project's skill total, split by category, with a legend matching colour, category name and count
 - **Directories** are the roots after `maxDepth` expansion, not the lines in your yaml
@@ -160,7 +197,7 @@ This section is read-only. To change configuration, go to **Settings → Plugins
 
 The settings card reads and writes only workspaces DSH has opened. Its endpoint sits under DSH's own `/api` and passes the host's sign-in and Host/Origin checks first.
 
-## Troubleshooting
+## 🩺 Troubleshooting
 
 The first time skills are listed in a project, the plugin writes a block to `<profile>/logs/dsh-skills-symlink.log`:
 
@@ -178,7 +215,7 @@ Common causes: `maxDepth` too small, the folder matched by `ignore`, a path outs
 
 A successful load writes an `applied` line. `no project config at ...` means the project has no config file.
 
-## Which skill wins on a name clash
+## 🏆 Which skill wins on a name clash
 
 The lower rank wins:
 
@@ -194,7 +231,7 @@ Between this plugin's own roots, the order is depth (shallower first), then `ski
 
 Every shadowed copy is logged with the `SKILL.md` paths of both sides, at `maxDepth: 1` too, and again when the set of clashes changes.
 
-## Security
+## 🔒 Security
 
 The plugin reads files only while DSH resolves skills, and writes only the selected workspace's `.dsh/skill-paths.yaml` when you save the settings card. It makes no outbound requests and reads no credentials.
 
@@ -202,7 +239,7 @@ The plugin reads files only while DSH resolves skills, and writes only the selec
 - Writes go only to workspaces DSH knows, are refused when the `.dsh` folder or the config file is a symbolic link, and go through a temporary file and a rename, so a half-written file is never left behind.
 - A write request must be same-origin, `application/json`, and at most 16 KB.
 
-## Differences from upstream
+## 🔀 Differences from upstream
 
 This repository is a fork of [NeoRrrr/dsh-project-skill-paths](https://github.com/NeoRrrr/dsh-project-skill-paths) v0.3.0.
 
@@ -233,7 +270,7 @@ The repository, the package name and the plugin id are all `dsh-skills-symlink`;
 
 </details>
 
-## Development
+## 🧑‍💻 Development
 
 ```bash
 npm ci
@@ -241,7 +278,7 @@ npm run check      # syntax check + all tests
 npm pack --dry-run
 ```
 
-## Uninstall
+## 🧹 Uninstall
 
 On Desktop, remove it from the **Plugins** page. For other profiles:
 
@@ -249,6 +286,6 @@ On Desktop, remove it from the **Plugins** page. For other profiles:
 dsh plugin --profile web remove dsh-skills-symlink
 ```
 
-## License
+## 📄 License
 
 [MIT](LICENSE)
