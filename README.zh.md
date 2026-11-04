@@ -1,10 +1,37 @@
-语言：[English](README.md) | **中文**
+<p align="center">
+  <img src="docs/social-preview.png" alt="dsh-skills-symlink：每个项目只加载自己列出的技能" width="720">
+</p>
 
-# dsh-skills-symlink
+<p align="center">
+  <a href="https://github.com/MYSTERY2019/dsh-skills-symlink/releases"><img src="https://img.shields.io/github/v/release/MYSTERY2019/dsh-skills-symlink?style=flat-square" alt="Latest release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/MYSTERY2019/dsh-skills-symlink?style=flat-square" alt="MIT license"></a>
+  <a href="https://github.com/deepseek-ai/deepseek-harness"><img src="https://img.shields.io/badge/DSH-0.2.x-4D6BFE?style=flat-square" alt="DeepSeek Harness 0.2.x"></a>
+  <img src="https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%E2%89%A524-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js ^22.19 || >=24">
+</p>
+
+<p align="center">
+  <a href="README.md">English</a> · <b>中文</b>
+</p>
+
+<p align="center">
+  <a href="#-安装">安装</a> ·
+  <a href="#-使用">使用</a> ·
+  <a href="#-配置">配置</a> ·
+  <a href="#-排查">排查</a>
+</p>
 
 给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）的每个项目配一套自己的技能。它替代 Hermes 里的 skill symlink：一份共享技能库，每个项目只加载自己列出的分类。插件本身不创建任何符号链接，名字只是借用 Hermes 的说法。
 
-## 为什么需要它
+## ✨ 亮点
+
+- 🗂️ **按项目配技能**：每个项目一份 `.dsh/skill-paths.yaml`，只看得到自己列出的技能
+- 📚 **分类目录一条路径搞定**：`maxDepth` 直接读 `category/skill/SKILL.md`，最深 6 层
+- 🔥 **热加载**：增删技能不用重启 DSH
+- 🛡️ **默认安全**：拒绝项目外的路径和符号链接，插件不发任何外部请求
+- 🩺 **自带诊断**：日志列出每个扫描到的目录，另附安装后自检脚本
+- 🧭 **可视化总览**：在插件页直接看每个项目的技能构成
+
+## 🤔 为什么需要它
 
 如果你是从 Hermes 过来的，会想念它的 skill symlink。技能只有一份，放在中央仓库；哪个项目要用，就往自己的技能目录里链几个过去。改原件，所有项目跟着变，不用复制。A 项目链写作那几个，B 项目链工具那两个，各自看到的正好是自己要的。加技能就是多链一条，不动别的项目。
 
@@ -18,9 +45,13 @@ DSH 换成了技能根，用 `customSkillDirs` 配。迁过来会撞上三件事
 
 这个插件把路径挪进项目，每个项目一份 `.dsh/skill-paths.yaml`；插件行里的 `maxDepth` 让它直接吃分类目录，写一条父路径就够。同一份库，项目 A 只加载 17 个，项目 B 加载 28 个。
 
-![同一份技能库，两个项目各自加载自己需要的分类](docs/how-it-works-zh.png)
+<p align="center">
+  <img src="docs/how-it-works-zh.png" alt="同一份技能库，两个项目各自加载自己需要的分类">
+  <br>
+  <i>同一份库，两个项目：A 加载 17 个技能，B 加载 28 个。</i>
+</p>
 
-## 安装
+## 📦 安装
 
 需要 DSH `>=0.2.1-rc.5 <0.3.0`（0.2.x）、Node.js `^22.19.0 || >=24.0.0`，安装时要能访问 GitHub。
 
@@ -40,9 +71,10 @@ dsh plugin --profile web add github:MYSTERY2019/dsh-skills-symlink#v0.4.0
 
 也可以下载 Release 里的 `dsh-skills-symlink-0.4.0.tgz`，把上面的 `github:...` 换成这个文件的路径。
 
+> [!IMPORTANT]
 > **装过旧的 v0.4.0？** `v0.4.0` 这个 tag 在 2026-11-04 移到了修复后的提交上。已安装的副本不会自动更新，请先卸载再按上面的步骤重新安装。
 
-## 使用
+## 🚀 使用
 
 在项目根建 `.dsh/skill-paths.yaml`：
 
@@ -98,7 +130,7 @@ skillPaths:
 技能目录在会话启动时读取，所以改动在**新会话**里才出现，正在跑的会话不受影响。`scripts/post-install-check.mjs`
 遇到“某个根 0 个技能、但下一层还藏着 SKILL.md”时会直接提示提高 `maxDepth`。
 
-## 确认是否生效
+## ✅ 确认是否生效
 
 装完、重启之后跑一次随包附带的检查：
 
@@ -108,7 +140,7 @@ node ~/.dsh/profiles/desktop/node_modules/dsh-skills-symlink/scripts/post-instal
 
 它会打印插件装在哪个 profile、宿主实际加载的是哪个版本、以及这个项目解析出的每一个根。版本对不上、插件行缺失、项目没有配置文件，都会列成问题并返回退出码 1。`--profile` 换 profile，`--json` 便于脚本调用。
 
-## 配置
+## 🔧 配置
 
 在 profile 的 `cordis.patch.yml` 里覆盖插件那一行：
 
@@ -135,15 +167,20 @@ node ~/.dsh/profiles/desktop/node_modules/dsh-skills-symlink/scripts/post-instal
 
 数值超出范围或不是整数时，插件用默认值并写一条警告，不会让 DSH 启动失败。
 
+> [!WARNING]
 > DSH 覆盖插件行时是整体替换 `config`，不是合并。要用的键得一次写全，否则会掉回默认值。比如只写了 `maxDepth`，`allowExternalPaths` 就回到 `false`，项目外的路径会被跳过（日志里有记录）。
 
-## 在插件页看当前结构
+## 🧭 在插件页看当前结构
 
 打开侧边栏 **插件 → dsh-skills-symlink**，往下滚到「来源信息」下面。
 
 「Skill 总览」按项目列出：一行一个项目，点开才读取，所以列表打开很快。
 
-![Skill 总览：每个项目一行，展开看技能构成和目录树](docs/overview-zh.png)
+<p align="center">
+  <img src="docs/overview-zh.png" alt="Skill 总览：每个项目一行，展开看技能构成和目录树">
+  <br>
+  <i>插件页的 Skill 总览：一行一个项目，展开看技能构成和目录树。</i>
+</p>
 
 - 顶部是构成条：整条代表这个项目的技能总数，按分类切段，下面跟图例，颜色、分类名、数量一一对应
 - 「目录」是 `maxDepth` 展开之后的结果，不是 yaml 里写的那几行
@@ -156,7 +193,7 @@ node ~/.dsh/profiles/desktop/node_modules/dsh-skills-symlink/scripts/post-instal
 
 设置卡片只能读写 DSH 已经打开过的工作区。它的接口挂在 DSH 自己的 `/api` 下，先经过宿主的登录和 Host/Origin 校验。
 
-## 排查
+## 🩺 排查
 
 第一次在某个项目里列技能时，插件会往 `<profile>/logs/dsh-skills-symlink.log` 写一段：
 
@@ -174,7 +211,7 @@ roots() first call for cwd=.../my-app: projectRoot=.../my-app, configFile=found,
 
 插件加载成功时会写一行 `applied`。日志里出现 `no project config at ...`，说明这个项目没写配置文件。
 
-## 同名技能谁优先
+## 🏆 同名技能谁优先
 
 rank 小的赢：
 
@@ -190,7 +227,7 @@ rank 小的赢：
 
 每份被遮蔽的技能都会写一条警告，带上两边的 `SKILL.md` 路径；`maxDepth: 1` 也一样，重名的组合变了会再写一次。
 
-## 安全
+## 🔒 安全
 
 插件只在 DSH 解析技能时读文件，只在保存设置卡片时写所选工作区的 `.dsh/skill-paths.yaml`。不发起外部请求，不读凭据。
 
@@ -198,7 +235,7 @@ rank 小的赢：
 - 写入只针对 DSH 已知的工作区，`.dsh` 目录或配置文件是符号链接时拒绝写入；先写临时文件再改名，不会写出半个文件。
 - 写入请求必须同源、`application/json`、不超过 16 KB。
 
-## 和上游的差异
+## 🔀 和上游的差异
 
 本仓库是 [NeoRrrr/dsh-project-skill-paths](https://github.com/NeoRrrr/dsh-project-skill-paths) v0.3.0 的 fork。
 
@@ -229,7 +266,7 @@ rank 小的赢：
 
 </details>
 
-## 开发
+## 🧑‍💻 开发
 
 ```bash
 npm ci
@@ -237,7 +274,7 @@ npm run check      # 语法检查 + 全部测试
 npm pack --dry-run
 ```
 
-## 卸载
+## 🧹 卸载
 
 Desktop 在 **Plugins** 页面移除。其他 profile：
 
@@ -245,6 +282,6 @@ Desktop 在 **Plugins** 页面移除。其他 profile：
 dsh plugin --profile web remove dsh-skills-symlink
 ```
 
-## 许可证
+## 📄 许可证
 
 [MIT](LICENSE)
