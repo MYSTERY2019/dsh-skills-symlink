@@ -379,7 +379,7 @@ window.__ModuleLoader__.load({ id: 'dsh-skills-symlink', factory: (require) => {
   // Rendered on this plugin's own page in the Plugins section. Every workspace
   // is one collapsible row; opening it shows how its skills split across the
   // categories, then the directory tree that produced them.
-  const PALETTE = ['#246bfd', '#12a594', '#e08b2a', '#8b5cf6', '#d64545', '#0ea5e9', '#6b7280', '#a16207']
+  const PALETTE = ['#246bfd', '#12a594', '#e08b2a', '#8b5cf6', '#d64545', '#0ea5e9', '#ec4899', '#10b981', '#f59e0b', '#6366f1', '#14b8a6', '#64748b']
 
   function buildTree(structure) {
     const split = (value) => String(value).split(/[\\/]+/).filter(Boolean)
@@ -409,6 +409,22 @@ window.__ModuleLoader__.load({ id: 'dsh-skills-symlink', factory: (require) => {
     }
     count(root)
     return root
+  }
+
+  function collectLeafCategories(node, segments = []) {
+    if (node.children.size === 0) {
+      if (node.own > 0) {
+        segments.push({ name: node.name, total: node.own, path: node.path })
+      }
+      return segments
+    }
+    if (node.own > 0) {
+      segments.push({ name: node.name, total: node.own, path: node.path })
+    }
+    for (const child of node.children.values()) {
+      collectLeafCategories(child, segments)
+    }
+    return segments
   }
 
   function workspaceName(item) {
@@ -505,7 +521,7 @@ window.__ModuleLoader__.load({ id: 'dsh-skills-symlink', factory: (require) => {
         return h('div', { style: style.hint }, tx('noConfig'))
       }
       const tree = buildTree(structure)
-      const segments = Array.from(tree.children.values())
+      const segments = collectLeafCategories(tree)
       const total = tree.total || 1
       const rows = []
       renderTree(tree, 0, rows)
