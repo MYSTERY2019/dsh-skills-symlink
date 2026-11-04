@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/social-preview.png" alt="dsh-skills-symlink：每个项目只加载自己列出的技能" width="720">
+  <img src="docs/hero.png" alt="dsh-skills-symlink：每个项目只加载自己列出的技能" width="720">
 </p>
 
 <p align="center">
@@ -70,9 +70,6 @@ dsh plugin --profile web add github:MYSTERY2019/dsh-skills-symlink#v0.4.0
 ```
 
 也可以下载 Release 里的 `dsh-skills-symlink-0.4.0.tgz`，把上面的 `github:...` 换成这个文件的路径。
-
-> [!IMPORTANT]
-> **装过旧的 v0.4.0？** `v0.4.0` 这个 tag 在 2026-11-04 移到了修复后的提交上。已安装的副本不会自动更新，请先卸载再按上面的步骤重新安装。
 
 ## 🚀 使用
 
